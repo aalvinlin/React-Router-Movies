@@ -7,32 +7,24 @@ const Movie = (props) => {
   
   const [movie, setMovie] = useState();
   const {movieID} = useParams();
-  const [counter, setcounter] = useState(0);
-
+  
   useEffect(() => {
 
-    console.log("counter:", counter, "movie ID:", movieID)
-    console.log("movie is", movie);
-    
-    const id = movieID;
+    // console.log("counter:", counter, "movie ID:", movieID)
+    console.log("movie is", movie, movieID);
     
     // change ^^^ that line and grab the id from the URL
     // You will NEED to add a dependency array to this effect hook
 
-    if (counter < 1)
-    {
        axios
-        .get(`http://localhost:5000/api/movies/${id}`)
+        .get(`http://localhost:5000/api/movies/${movieID}`)
         .then(response => {
           setMovie(response.data);
-          setcounter(counter + 1);
         })
         .catch(error => {
           console.error(error);
         });
-    }
 
-  // },[movie, movieID]);
 },[]);
   
   // Uncomment this only when you have moved on to the stretch goals
