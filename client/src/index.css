@@ -5,13 +5,21 @@ body {
   background-color: #f2f2f2;
 }
 
+a {
+  text-decoration: none;
+  color: #006666;
+}
+
+a:hover {
+  color: #66CCCC;
+}
+
 .movie-card {
   background-color: #fff;
   border: 0;
   box-shadow: 0 -1px 0 #e0e0e0, 0 0 2px rgba(0, 0, 0, 0.12),
     0 2px 4px rgba(0, 0, 0, 0.24);
   padding: 1rem;
-  cursor: pointer;
   position: relative;
   margin: 1rem auto;
 }
@@ -44,7 +52,8 @@ body {
   margin: 0 10px;
 }
 .saved-active {
-  color: blue;
+  color: white;
+  background-color: #333366;
   border: 1px solid grey;
   padding: 5px;
 }
@@ -60,6 +69,7 @@ body {
   border: 1px solid grey;
   padding: 5px 10px;
   background-color: lightseagreen;
+  cursor: pointer;
 }
 .save-button:hover {
   background-color: green;
@@ -69,4 +79,9 @@ body {
 .home-button {
   padding: 5px 10px;
   background-color: lightskyblue;
+}
+
+.home-button:hover {
+  padding: 5px 10px;
+  background-color: #CCFFFF;
 }
