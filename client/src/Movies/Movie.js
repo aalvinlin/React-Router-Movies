@@ -34,7 +34,7 @@ const Movie = (props) => {
   }
 
   return (
-    <MovieCard movie={movie} useLinkInTitle={false}></MovieCard>
+    <MovieCard movie={movie} useLinkInTitle={false} addToSavedList={props.addToSavedList}></MovieCard>
   );
 }
 

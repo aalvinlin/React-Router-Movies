@@ -1,17 +1,10 @@
 import React from 'react';
 import { Link } from "react-router-dom"
 
-const MovieCard = ({movie, useLinkInTitle}) => {
-
-  const saveMovie = () => {
-    // const addToSavedList = props.addToSavedList;
-    // addToSavedList(movie)
-  }
+const MovieCard = ({movie, useLinkInTitle, addToSavedList}) => {
 
   function addLink(isTrue)
     {
-      console.log(movie)
-
       if (isTrue)
         {
           return (
@@ -43,7 +36,7 @@ const MovieCard = ({movie, useLinkInTitle}) => {
           </div>
         ))}
       </div>
-      <div className="save-button" onClick={() => saveMovie()}>Save</div>
+      <div className="save-button" onClick={() => addToSavedList(movie)}>Save</div>
     </div>
   );
 };

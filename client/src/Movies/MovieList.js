@@ -29,12 +29,13 @@ const MovieList = props => {
       ))}
     </div>
   );
-}
 
-function MovieDetails({ movie }) {
-  return (
-    <MovieCard movie={movie} useLinkInTitle={true}></MovieCard>
-  );
+  function MovieDetails({ movie }) {
+    return (
+      <MovieCard movie={movie} useLinkInTitle={true} addToSavedList={props.addToSavedList}></MovieCard>
+    );
+  }
+
 }
 
 export default MovieList;
