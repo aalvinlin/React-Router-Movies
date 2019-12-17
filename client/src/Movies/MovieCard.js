@@ -3,12 +3,19 @@ import { Link } from "react-router-dom"
 
 const MovieCard = ({movie, useLinkInTitle}) => {
 
+  const saveMovie = () => {
+    // const addToSavedList = props.addToSavedList;
+    // addToSavedList(movie)
+  }
+
   function addLink(isTrue)
     {
+      console.log(movie)
+
       if (isTrue)
         {
           return (
-            <Link>
+            <Link to={"/movies/" + movie.id}>
               { movie.title }
             </Link>
           );
@@ -36,7 +43,7 @@ const MovieCard = ({movie, useLinkInTitle}) => {
           </div>
         ))}
       </div>
-      <div className="save-button">Save</div>
+      <div className="save-button" onClick={() => saveMovie()}>Save</div>
     </div>
   );
 };
