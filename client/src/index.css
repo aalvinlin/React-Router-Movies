@@ -5,6 +5,15 @@ body {
   background-color: #f2f2f2;
 }
 
+a {
+  text-decoration: none;
+  color: #006666;
+}
+
+a:hover {
+  color: #66CCCC;
+}
+
 .movie-card {
   background-color: #fff;
   border: 0;
@@ -43,7 +52,8 @@ body {
   margin: 0 10px;
 }
 .saved-active {
-  color: blue;
+  color: white;
+  background-color: #333366;
   border: 1px solid grey;
   padding: 5px;
 }
@@ -69,4 +79,9 @@ body {
 .home-button {
   padding: 5px 10px;
   background-color: lightskyblue;
+}
+
+.home-button:hover {
+  padding: 5px 10px;
+  background-color: #CCFFFF;
 }

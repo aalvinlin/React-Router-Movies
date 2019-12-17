@@ -11,13 +11,7 @@ const Movie = (props) => {
   const {movieID} = useParams();
   
   useEffect(() => {
-
-    // console.log("counter:", counter, "movie ID:", movieID)
-    console.log("movie is", movie, movieID);
     
-    // change ^^^ that line and grab the id from the URL
-    // You will NEED to add a dependency array to this effect hook
-
        axios
         .get(`http://localhost:5000/api/movies/${movieID}`)
         .then(response => {
@@ -27,7 +21,7 @@ const Movie = (props) => {
           console.error(error);
         });
 
-},[]);
+},[movieID]);
   
   if (!movie) {
     return <div>Loading movie information...</div>;

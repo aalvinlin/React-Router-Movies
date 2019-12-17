@@ -11,11 +11,15 @@ const App = () => {
 
   const addToSavedList = movie => {
 
-    if (!savedList.includes(movie))
+    console.log("Attempting to save", movie, savedList);
+
+    // can't use savedList.includes()
+    // if (!savedList.includes(movie))
+    if (savedList.filter(
+        alreadySavedMovie => alreadySavedMovie.title === movie.title).length === 0)
       {
         setSavedList( [...savedList, movie] );
       }
-
   };
 
   return (
